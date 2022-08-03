@@ -1,0 +1,11 @@
+<div class="row d-flex justify-content-center align-items-center vh-100 vw-100">
+  <div class="col-md-4" style="padding: 15px;box-shadow: 0px 0px 3px 0px; border-radius: 5px;">
+      <mat-label>Pick a user!!</mat-label>
+        <mat-select disableOptionCentering placeholder="Select a user to preview "  class="form-control" #select >
+          <mat-option *ngFor="let option of data"  [value]="option.id">{{option.first_name}}</mat-option>
+        </mat-select>
+        <div class="text-center">
+          <button class="mt-2"color="primary" mat-raised-button (click)="onPreview(select)"> preview!!</button>
+        </div>
+  </div>
+</div>
